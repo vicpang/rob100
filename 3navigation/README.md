@@ -62,5 +62,8 @@
     1 RRT: probabilistic based methods that can also generate kinematically feasitble pathes
 
 # summary
-    1. everything we need is based on the assumption that we have the map, and know the robot location. but how do we get them in the first place?
-    2. robotics system toolbox from mathworks provide binary occupancy grid and prm implementation
+    1. robot navigation is about going from one place to another where there might be obstacles. The easist model is bugs algorithm which does not take the whole map into consideration, it can achieve the goal, but solution is not optimal. Then map based methods come out, where map is represented using occupancy grid. D* algorithm uses graphs for searching. It has heavy planning phase, so whenever replanning is needed, it takes a lot of time. Then PRM comes out, it uses probabilistic sampling and partition the graph into a network. This scales the algorithm. Finally we need to take into account the vehicle dynamics, the vehicle does not move as we expect in reality, thus lattice model is proposed to model vehicle trajectory. Finally RRT is proposed
+    2. everything we need is based on the assumption that we have the map, and know the robot location. but how do we get them in the first place?
+    3. robotics system toolbox from mathworks provide binary occupancy grid and prm implementation
+    4. we will explore the topic of navigation in a later stage
+    
